@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "152375118326",
+    "firebase_url": "https://calculadora-b5f93.firebaseio.com",
+    "project_id": "calculadora-b5f93",
+    "storage_bucket": "calculadora-b5f93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152375118326:android:66e789f1433f00e1",
+        "android_client_info": {
+          "package_name": "com.michelenadevelopment.calculadorapaypal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152375118326-248lp3u3229rtkafvssp95uqb0bsp692.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.michelenadevelopment.calculadorapaypal",
+            "certificate_hash": "e2f20a605dcab4e00ec212682f90708d9bd763f6"
+          }
+        },
+        {
+          "client_id": "152375118326-3qsspjl4qfsdf135s5dribt71b6d529l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIbmFA_MKg0rj90udxrHAYwqmyUDFuZjA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152375118326-3qsspjl4qfsdf135s5dribt71b6d529l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-7656486697746182~8725726230"
+    }
+  ],
+  "configuration_version": "1"
+}
