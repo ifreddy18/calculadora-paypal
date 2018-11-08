@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Calculadora PayPal</string>
+    <string name="michelena">Michelena Development</string>
+    <string name="tv_main_title">¿Sabes el monto que se quiere enviar o el que se quiere recibir?</string>
+    <string name="btn_option1">Monto a enviar</string>
+    <string name="btn_option2">Monto a recibir</string>
+    <string name="btn_calcular">Calcular</string>
+    <string name="tv_Option1_monto_a_enviar">Ingresa el monto que se quiere enviar:</string>
+    <string name="tv_Option2_monto_a_enviar">Monto a enviar:</string>
+    <string name="tv_comision">Comisión:</string>
+    <string name="tv_Option1_monto_a_recibir">Monto a recibir:</string>
+    <string name="tv_Option2_monto_a_recibir">Ingrese el monto que se quiere recibir:</string>
+    <string name="hint_cero">$0.00</string>
+    <string name="btn_borrar">Borrar</string>
+    <string name="title_activity_launcher">LauncherActivity</string>
+    <string name="logolauncher">LogoLauncher</string>
+</resources>
