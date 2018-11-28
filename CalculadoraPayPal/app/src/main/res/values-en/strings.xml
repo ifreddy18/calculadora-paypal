@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PayPal Calculator</string>
+    <string name="country_usa">United States (USD)</string>
+    <string name="btn_borrar">Clear</string>
+    <string name="btn_siguiente" translatable="false">Next</string>
+    <string name="comision_usa_domesticaBalance_1" translatable="false">Free</string>
+    <string name="tv_main_title_1">Do you know the amount you want to send or the amount you want to receive?</string>
+    <string name="tv_main_title_2">What calculation do you want to make?</string>
+    <string name="tv_main_title_3">Advanced calculations</string>
+    <string name="btn_option1">Calculate amount to receive</string>
+    <string name="btn_option2">Calculate amount to send</string>
+    <string name="btn_calcular">Calculate</string>
+    <string name="tv_Option1_monto_a_enviar">Enter the amount you want to send:</string>
+    <string name="tv_monto_a_enviar">Amount to send:</string>
+    <string name="tv_comision">Fee:</string>
+    <string name="tv_monto_a_recibir">Amount to receive:</string>
+    <string name="tv_Option2_monto_a_recibir">Enter the amount you want to receive:</string>
+    <string name="btn_acercaDe">About</string>
+    <string name="tv_seleccion_pais">Select the country of the account that will send the money.</string>
+    <string name="tv_tipo_de_comision">Fee rate:</string>
+    <string name="tv_seleccion_transaccion">Select the type of transaction you want to make</string>
+    <string name="cb_recordar">Remember selection.</string>
+    <string name="transaction_otros_domesticoInternacional">Domestic/International</string>
+    <string name="country_otrosPaises">Other countries (USD)</string>
+    <string name="transaction_usa_domesticaBalance">Domestic: funded by a PayPal balance or a bank account linked to your PayPal account</string>
+    <string name="transaction_usa_domesticaTarjeta">Domestic: funded by a credit card, debit card or PayPal Credit</string>
+    <string name="transaction_usa_internacionalEuropaBalance">International (to Canada and Europe): : funded by a PayPal balance or a bank account linked to your PayPal account</string>
+    <string name="transaction_usa_internacionalOtrosBalance">International (to other contries): funded by a PayPal balance or a bank account linked to your PayPal account</string>
+    <string name="transaction_usa_internacionalEuropaTarjeta">International (to Canada and Europe): funded by a credit card, debit card or PayPal Credit</string>
+    <string name="transaction_usa_internacionalOtrosTarjeta">International (to other contries): funded by a credit card, debit card or PayPal Credit</string>
+    <string name="transaction_usa_ventaInterior">Sales within the US</string>
+    <string name="transaction_usa_ventaExterior">International sales</string>
+    <string name="transaction_usa_hereManual">PayPal Here: Manually entered transactions</string>
+    <string name="transaction_usa_hereTarjeta">PayPal Here: Swipe Card</string>
+    <string name="transaction_usa_caridades">Charities</string>
+</resources>

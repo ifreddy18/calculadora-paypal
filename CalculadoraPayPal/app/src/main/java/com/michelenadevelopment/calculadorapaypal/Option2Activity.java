@@ -1,11 +1,15 @@
 package com.michelenadevelopment.calculadorapaypal;
 
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -13,9 +17,11 @@ import com.google.android.gms.ads.MobileAds;
 
 public class Option2Activity extends AppCompatActivity {
 
+    private static PayPal paypal = new PayPal();
     private AdView mAdViewOption2;
-
-    private EditText montoAEnviarOption2, montoARecibirOption2, comisionOption2;
+    private EditText montoARecibir;
+    private TextView comision, montoAEnviar;
+    private Spinner spinnerComision;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,55 +39,203 @@ public class Option2Activity extends AppCompatActivity {
         // Declaracion de Botones
         Button buttonCalculate, buttonClear;
 
-        montoARecibirOption2 = findViewById(R.id.editText_Option2_MontoARecibir);
-        comisionOption2 = findViewById(R.id.editText_Option2_Comision);
-        montoAEnviarOption2 = findViewById(R.id.editText_Option2_MontoAEnviar);
+        // Asignacion de las View
+        montoARecibir = findViewById(R.id.et_Option2_MontoARecibir);
+        comision = findViewById(R.id.tv_Option2_Comision);
+        montoAEnviar = findViewById(R.id.tv_Option2_MontoAEnviar);
         buttonCalculate = findViewById(R.id.button_Option2_Calculate);
         buttonClear = findViewById(R.id.button_Option2_Clear);
+        spinnerComision = findViewById(R.id.spinner_Option2);
 
+        // Lista de Comisiones "Estados Unidos (USD)"
+        String comisionUsaDomesticaBalance[] = new String[]{
+                getString(R.string.comision_usa_domesticaBalance_1)};
+        String comisionUsaDomesticaTarjeta[] = new String[]{
+                getString(R.string.comision_usa_domesticaTarjeta_1)};
+        String comisionUsaInternacionalEuropaBalance[] = new String[]{
+                getString(R.string.comision_usa_internacionalEuropaBalance_1),
+                getString(R.string.comision_usa_internacionalEuropaBalance_2),
+                getString(R.string.comision_usa_internacionalEuropaBalance_3)};
+        String comisionUsaInternacionalEuropaTarjeta[] = new String[]{
+                getString(R.string.comision_usa_internacionalEuropaTarjeta_1),
+                getString(R.string.comision_usa_internacionalEuropaTarjeta_2),
+                getString(R.string.comision_usa_internacionalEuropaTarjeta_3)};
+        String comisionUsaInternacionalOtrosBalance[] = new String[]{
+                getString(R.string.comision_usa_internacionalOtrosBalance_1),
+                getString(R.string.comision_usa_internacionalOtrosBalance_2),
+                getString(R.string.comision_usa_internacionalOtrosBalance_3)};
+        String comisionUsaInternacionalOtrosTarjeta[] = new String[]{
+                getString(R.string.comision_usa_internacionalOtrosTarjeta_1),
+                getString(R.string.comision_usa_internacionalOtrosTarjeta_2),
+                getString(R.string.comision_usa_internacionalOtrosTarjeta_3)};
+        String comisionUsaVentaInterior[] = new String[]{
+                getString(R.string.comision_usa_ventaInterior_1)};
+        String comisionUsaVentaExterior[] = new String[]{
+                getString(R.string.comision_usa_ventaExterior_1)};
+        String comisionUsaHereTarjeta[] = new String[]{
+                getString(R.string.comision_usa_hereTarjeta_1)};
+        String comisionUsaHereManual[] = new String[]{
+                getString(R.string.comision_usa_hereManual_1)};
+        String comisionUsaCaridades[] = new String[]{
+                getString(R.string.comision_usa_caridades_1)};
+
+        // Lista de Comisiones "Otros Paises (USD)"
+        String comisionOtrosDomesticoInternacional[] = new String[]{
+                getString(R.string.comision_otros_domesticoInternacional_1)};
+
+
+        // Obtencion de la seleccion de pais y transaccion
+        final String seleccionPais = getIntent().getStringExtra("seleccionPais");
+        final String seleccionTransaccion = getIntent().getStringExtra("seleccionTransaccion");
+        paypal.setDivisa(getIntent().getStringExtra("divisa"));
+
+        // Condicion para set Spinner segun tipo de transaccion y pais seleccionado en SelectCountryActivity
+        ArrayAdapter<String> arrayComision;
+
+        if (seleccionPais.equals(getString(R.string.country_usa))) {
+            if (seleccionTransaccion.equals(getString(R.string.transaction_usa_domesticaBalance))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaDomesticaBalance);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_domesticaTarjeta))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaDomesticaTarjeta);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_internacionalEuropaBalance))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaInternacionalEuropaBalance);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_internacionalEuropaTarjeta))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaInternacionalEuropaTarjeta);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_internacionalOtrosBalance))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaInternacionalOtrosBalance);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_internacionalOtrosTarjeta))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaInternacionalOtrosTarjeta);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_ventaInterior))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaVentaInterior);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_ventaExterior))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaVentaExterior);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_hereTarjeta))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaHereTarjeta);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_hereManual))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaHereManual);
+            } else if (seleccionTransaccion.equals(getString(R.string.transaction_usa_caridades))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionUsaCaridades);
+            } else {
+                arrayComision = null;
+            }
+        } else if (seleccionPais.equals(getString(R.string.country_otrosPaises))) {
+            if (seleccionTransaccion.equals(getString(R.string.transaction_otros_domesticoInternacional))) {
+                arrayComision = new ArrayAdapter<>(this, R.layout.custom_spinner, comisionOtrosDomesticoInternacional);
+            } else {
+                arrayComision = null;
+            }
+        } else {
+            arrayComision = null;
+            Toast.makeText(this, "No hay pais seleccionado", Toast.LENGTH_LONG).show();
+        }
+
+        spinnerComision.setAdapter(arrayComision);
+
+
+        // Boton Calcular
         buttonCalculate.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("DefaultLocale")
             @Override
             public void onClick(View v) {
+                String comisionString = spinnerComision.getSelectedItem().toString();
 
-                Double montoARecibirDouble;
+                // Condicionales para set de comisiones
+                setComisionesPayPal(comisionString);
 
-                try{
-                    montoARecibirDouble = Double.valueOf(montoARecibirOption2.getText().toString());
-                } catch (NumberFormatException e){
+                // Verifica que montoAEnviar devuelva un double
+                try {
+                    paypal.setRecibido(Double.valueOf(montoARecibir.getText().toString()));
+                } catch (NumberFormatException e) {
                     e.fillInStackTrace();
-                    montoARecibirDouble = 0.0;
+                    paypal.setRecibido(0.0);
                 }
 
-                calculateOption2(montoARecibirDouble);
+                paypal.calcularMontoEnviar();
+
+                montoARecibir.setText(String.format("%.2f", paypal.getRecibido()));
+                comision.setText(String.format("%s %.2f", paypal.getDivisa(), paypal.getComisionTotal()));
+                montoAEnviar.setText(String.format("%s %.2f", paypal.getDivisa(), paypal.getEnviado()));
             }
         });
 
+
+        // Boton Clear
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                montoAEnviarOption2.setText("");
-                comisionOption2.setText("");
-                montoARecibirOption2.setText("");
+                montoAEnviar.setText("");
+                comision.setText("");
+                montoARecibir.setText("");
             }
         });
 
     }
 
-    /**
-     * Calcula el monto a enviar y la comision
-     * @param montoARecibir: monto a recibir
-     */
-    @SuppressLint("DefaultLocale")
-    public void calculateOption2(Double montoARecibir){
-
-        if (montoARecibir > 0){
-            Double montoAEnviarDouble = (montoARecibir + 0.3)/0.946;
-            Double comisionDouble = montoAEnviarDouble - montoARecibir;
-
-            montoAEnviarOption2.setText(String.format("$%.2f",montoAEnviarDouble));
-            comisionOption2.setText(String.format("$%.2f",comisionDouble));
-            montoARecibirOption2.setText(String.format("$%.2f",montoARecibir));
-
+    public void setComisionesPayPal(String comisionesString) {
+        if (comisionesString.equals(getString(R.string.comision_usa_domesticaBalance_1))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(0);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_domesticaTarjeta_1))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(0.30);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaBalance_1))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(0.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaBalance_2))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaBalance_3))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaTarjeta_1))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(0.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaTarjeta_2))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalEuropaTarjeta_3))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosBalance_1))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(0.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosBalance_2))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosBalance_3))) {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(4.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosTarjeta_1))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(0.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosTarjeta_2))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(2.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_internacionalOtrosTarjeta_3))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(4.99);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_ventaInterior_1))) {
+            paypal.setComisionPorcentaje(2.9);
+            paypal.setComisionTasaFija(0.30);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_ventaExterior_1))) {
+            paypal.setComisionPorcentaje(4.4);
+            paypal.setComisionTasaFija(0.30);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_hereTarjeta_1))) {
+            paypal.setComisionPorcentaje(2.7);
+            paypal.setComisionTasaFija(0);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_hereManual_1))) {
+            paypal.setComisionPorcentaje(3.5);
+            paypal.setComisionTasaFija(0);
+        } else if (comisionesString.equals(getString(R.string.comision_usa_caridades_1))) {
+            paypal.setComisionPorcentaje(2.2);
+            paypal.setComisionTasaFija(0.30);
+        } else if (comisionesString.equals(getString(R.string.comision_otros_domesticoInternacional_1))) {
+            paypal.setComisionPorcentaje(5.4);
+            paypal.setComisionTasaFija(0.30);
+        } else {
+            paypal.setComisionPorcentaje(0);
+            paypal.setComisionTasaFija(0);
         }
     }
+
 }

@@ -12,7 +12,7 @@ import com.google.android.gms.ads.MobileAds;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AdView mAdView;
+    private AdView mAdViewMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         MobileAds.initialize(this, "ca-app-pub-7656486697746182~8725726230");
 
         // Load an Ad
-        mAdView = findViewById(R.id.adViewMain);
+        mAdViewMain = findViewById(R.id.adViewMain);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdViewMain.loadAd(adRequest);
 
         Button buttonOption1 = findViewById(R.id.buttonOption1);
         Button buttonOption2 = findViewById(R.id.buttonOption2);
@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Option1Activity.class);
+                Intent i = new Intent(MainActivity.this, SelectCountryActivity.class);
+                i.putExtra("option","Option1");
                 startActivity(i);
 
             }
@@ -42,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
         buttonOption2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Option2Activity.class);
+                Intent i = new Intent(MainActivity.this, SelectCountryActivity.class);
+                i.putExtra("option","Option2");
                 startActivity(i);
             }
         });

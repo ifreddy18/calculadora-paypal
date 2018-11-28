@@ -9,52 +9,82 @@
 
 
     <TextView
-        android:id="@+id/textView_Option1_MontoAEnviar"
+        android:id="@+id/tv_Option1_TipoDeComision_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tv_tipo_de_comision"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_Option1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/custom_spinner_drawable_1"
+        android:gravity="center|end"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Option1_TipoDeComision_tag" />
+
+    <TextView
+        android:id="@+id/tv_Option1_MontoAEnviar_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:text="@string/tv_Option1_monto_a_enviar"
+        android:text="@string/tv_monto_a_enviar"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_Option1" />
 
     <TextView
-        android:id="@+id/textView_Option1_Comision"
+        android:id="@+id/tv_Option1_Comision_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="@string/tv_comision"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Option1_MontoAEnviar" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Option1_MontoAEnviar_tag" />
 
     <TextView
-        android:id="@+id/textView_Option1_MontoARecibir"
+        android:id="@+id/tv_Option1_MontoARecibir_tag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/tv_Option1_monto_a_recibir"
+        android:layout_marginTop="24dp"
+        android:text="@string/tv_monto_a_recibir"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Option1_Comision" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Option1_Comision_tag" />
 
     <EditText
-        android:id="@+id/editText_Option1_MontoAEnviar"
+        android:id="@+id/et_Option1_MontoAEnviar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:autofillHints="@string/hint_cero"
         android:clickable="true"
         android:ems="10"
@@ -65,84 +95,71 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Option1_MontoAEnviar_tag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Option1_MontoAEnviar"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         tools:ignore="UnusedAttribute" />
 
-    <EditText
-        android:id="@+id/editText_Option1_Comision"
+    <TextView
+        android:id="@+id/tv_Option1_Comision"
         android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:autofillHints="@string/hint_cero"
-        android:clickable="false"
-        android:ems="10"
-        android:focusable="false"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center|end"
         android:hint="@string/hint_cero"
-        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Option1_Comision_tag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Option1_Comision"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
-    <EditText
-        android:id="@+id/editText_Option1_MontoARecibir"
+    <TextView
+        android:id="@+id/tv_Option1_MontoARecibir"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginRight="48dp"
-        android:autofillHints="@string/hint_cero"
-        android:clickable="false"
-        android:ems="10"
-        android:focusable="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:gravity="center|end"
         android:hint="@string/hint_cero"
-        android:inputType="numberDecimal"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:textSize="30sp"
+        android:textSize="24sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_Option1_MontoARecibir_tag"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_Option1_MontoARecibir"
-        tools:ignore="UnusedAttribute" />
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <Button
         android:id="@+id/button_Option1_Calculate"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/button_style_1"
         android:text="@string/btn_calcular"
         android:textColor="@color/paypalBlue"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Option1_MontoARecibir" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_Option1_MontoARecibir_tag" />
 
     <Button
         android:id="@+id/button_Option1_Clear"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:background="@drawable/button_style_1"
         android:text="@string/btn_borrar"
         android:textColor="@color/paypalBlue"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/editText_Option1_MontoARecibir" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_Option1_Calculate"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adViewOption1"
@@ -150,14 +167,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         ads:adSize="LARGE_BANNER"
         ads:adUnitId="ca-app-pub-7656486697746182/3194800591"
+        ads:layout_constraintBottom_toBottomOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintStart_toStartOf="parent"
-        ads:layout_constraintTop_toTopOf="parent">
+        ads:layout_constraintStart_toStartOf="parent">
+
     </com.google.android.gms.ads.AdView>
 
     <android.support.constraint.Guideline

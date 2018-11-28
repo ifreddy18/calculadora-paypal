@@ -1,17 +1,29 @@
 <resources>
     <string name="app_name">Calculadora PayPal</string>
-    <string name="michelena">Michelena Development</string>
-    <string name="tv_main_title">¿Sabes el monto que se quiere enviar o el que se quiere recibir?</string>
-    <string name="btn_option1">Monto a enviar</string>
-    <string name="btn_option2">Monto a recibir</string>
+    <string name="michelena" translatable="false">Michelena Development</string>
+    <string name="tv_main_title_1">¿Sabes el monto que se quiere enviar o el que se quiere recibir?</string>
+    <string name="tv_main_title_2">¿Que cálculo deseas realizar?</string>
+    <string name="tv_main_title_3">Cálculos avanzados</string>
+    <!-- MainActivity -->
+    <string name="btn_option1">Calcular monto a recibir</string>
+    <string name="btn_option2">Calcular monto a enviar</string>
     <string name="btn_calcular">Calcular</string>
     <string name="tv_Option1_monto_a_enviar">Ingresa el monto que se quiere enviar:</string>
-    <string name="tv_Option2_monto_a_enviar">Monto a enviar:</string>
+    <string name="tv_monto_a_enviar">Monto a enviar:</string>
     <string name="tv_comision">Comisión:</string>
-    <string name="tv_Option1_monto_a_recibir">Monto a recibir:</string>
+    <string name="tv_monto_a_recibir">Monto a recibir:</string>
     <string name="tv_Option2_monto_a_recibir">Ingrese el monto que se quiere recibir:</string>
-    <string name="hint_cero">$0.00</string>
+    <string name="hint_cero" translatable="false">0.00</string>
     <string name="btn_borrar">Borrar</string>
-    <string name="title_activity_launcher">LauncherActivity</string>
-    <string name="logolauncher">LogoLauncher</string>
+    <string name="title_activity_launcher" translatable="false">LauncherActivity</string>
+    <string name="logolauncher" translatable="false">LogoLauncher</string>
+    <string name="btn_acercaDe">Acerca de</string>
+    <string name="tv_tipo_de_comision">Tipo de comisión:</string>
+
+    <!-- SelectCoutryActivity / SelectTransactionActivity -->
+    <string name="tv_seleccion_pais">Seleccione el pais de la cuenta que enviara el dinero</string>
+    <string name="tv_seleccion_transaccion">Seleccione el tipo de transacción que desea realizar</string>
+    <string name="cb_recordar">Recordar selección.</string>
+    <string name="btn_siguiente">Siguiente</string>
+
 </resources>

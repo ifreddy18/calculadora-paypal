@@ -5,12 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_activity_style_1"
-    tools:context=".MainActivity">
-    <!---->
-
+    tools:context=".SelectTransactionActivity">
 
     <TextView
-        android:id="@+id/tv_main_title"
+        android:id="@+id/tv_seleccion_transaccion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/tv_seleccion_transaccion"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_seleccion_transaccion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -18,52 +34,49 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:text="@string/tv_main_title_2"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/buttonOption1"
-        android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/button_style_1"
-        android:text="@string/btn_option1"
-        android:textColor="@color/paypalBlue"
-        android:textSize="18sp"
+        android:background="@drawable/custom_spinner_drawable_1"
+        android:spinnerMode="dialog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_title" />
-
-    <Button
-        android:id="@+id/buttonOption2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seleccion_transaccion" />
+    <!--
+    <CheckBox
+        android:id="@+id/cb_seleccion_transaccion"
         android:layout_width="0dp"
-        android:layout_height="64dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:background="@drawable/button_style_1"
-        android:text="@string/btn_option2"
-        android:textColor="@color/paypalBlue"
-        android:textSize="18sp"
+        android:text="@string/cb_recordar_transaccion"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOption1" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_seleccion_transaccion" />
+    -->
+    <Button
+        android:id="@+id/button_seleccion_transaccion"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_style_1"
+        android:text="@string/btn_siguiente"
+        android:textColor="@color/paypalBlue"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewSelectTransaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3" />
 
     <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adViewMain"
+        android:id="@+id/adViewSelectTransaction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -73,10 +86,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         ads:adSize="LARGE_BANNER"
-        ads:adUnitId="ca-app-pub-7656486697746182/2431780620"
+        ads:adUnitId="ca-app-pub-7656486697746182/1817424100"
         ads:layout_constraintBottom_toBottomOf="parent"
         ads:layout_constraintEnd_toEndOf="parent"
-        ads:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
+        ads:layout_constraintStart_toStartOf="parent">
+    </com.google.android.gms.ads.AdView>
 
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
 
 </android.support.constraint.ConstraintLayout>

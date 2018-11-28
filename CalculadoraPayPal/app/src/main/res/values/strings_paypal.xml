@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Lista de Paises -->
+    <string name="country_usa">Estados Unidos (USD)</string>
+    <string name="country_otrosPaises">Otros paises (USD)</string>
+
+    <!-- Simbolos de divisas -->
+    <string name="divisa_USD" translatable="false">$</string>
+
+    <!--#########################################################################################-->
+    <!-- Lista de opciones Estados Unidos-->
+    <string name="transaction_usa_domesticaBalance">Doméstica: financiado por el balance PayPal ó por una cuenta bancaria vinculada a PayPal</string>
+    <string name="transaction_usa_domesticaTarjeta">Doméstica: financiado por una tarjeta de debito, tarjeta de credito ó por Crédito PayPal</string>
+    <string name="transaction_usa_internacionalEuropaBalance">Internacional (Destino Canada ó Europa): financiado por el balance PayPal ó por una cuenta bancaria vinculada a PayPal</string>
+    <string name="transaction_usa_internacionalEuropaTarjeta">Internacional (Destino Canada ó Europa): financiado por una tarjeta de debito, tarjeta de credito ó por Crédito PayPal</string>
+    <string name="transaction_usa_internacionalOtrosBalance">Internacional (Destino otros paises): financiado por el balance PayPal ó por una cuenta bancaria vinculada a PayPal</string>
+    <string name="transaction_usa_internacionalOtrosTarjeta">Internacional (Destino otros paises): financiado por una tarjeta de debito, tarjeta de credito ó por Crédito PayPal</string>
+    <string name="transaction_usa_ventaInterior">Ventas: Interior del pais</string>
+    <string name="transaction_usa_ventaExterior">Ventas: Exterior del pais</string>
+    <string name="transaction_usa_hereTarjeta">PayPal Here: Deslizando tarjeta</string>
+    <string name="transaction_usa_hereManual">PayPal Here: Ingresando datos manual</string>
+    <string name="transaction_usa_caridades">Obras de Caridad</string>
+
+    <!-- Lista de comisiones Estados Unidos-->
+    <string name="comision_usa_domesticaBalance_1">Gratis</string>
+    <string name="comision_usa_domesticaTarjeta_1" translatable="false">2.9% + $0.30</string>
+    <string name="comision_usa_internacionalEuropaBalance_1" translatable="false">$0.99 ($0.00~$49.99)</string>
+    <string name="comision_usa_internacionalEuropaBalance_2" translatable="false">$2.99 ($50.00~$99.99)</string>
+    <string name="comision_usa_internacionalEuropaBalance_3" translatable="false">$2.99 (+$100.00)</string>
+    <string name="comision_usa_internacionalEuropaTarjeta_1" translatable="false">2.9% + $0.99 ($0.00~$49.99)</string>
+    <string name="comision_usa_internacionalEuropaTarjeta_2" translatable="false">2.9% + $2.99 ($50.00~$99.99)</string>
+    <string name="comision_usa_internacionalEuropaTarjeta_3" translatable="false">2.9% + $2.99 (+$100.00)</string>
+    <string name="comision_usa_internacionalOtrosBalance_1" translatable="false">$0.99 ($0.00~$49.99)</string>
+    <string name="comision_usa_internacionalOtrosBalance_2" translatable="false">$2.99 ($50.00~$99.99)</string>
+    <string name="comision_usa_internacionalOtrosBalance_3" translatable="false">$4.99 (+$100.00)</string>
+    <string name="comision_usa_internacionalOtrosTarjeta_1" translatable="false">2.9% + $0.99 ($0.00~$49.99)</string>
+    <string name="comision_usa_internacionalOtrosTarjeta_2" translatable="false">2.9% + $2.99 ($50.00~$99.99)</string>
+    <string name="comision_usa_internacionalOtrosTarjeta_3" translatable="false">2.9% + $4.99 (+$100.00)</string>
+    <string name="comision_usa_ventaInterior_1" translatable="false">2.9% + $0.30</string>
+    <string name="comision_usa_ventaExterior_1" translatable="false">4.4% + $0.30</string>
+    <string name="comision_usa_hereTarjeta_1" translatable="false">2.7%</string>
+    <string name="comision_usa_hereManual_1" translatable="false">3.5%</string>
+    <string name="comision_usa_caridades_1" translatable="false">2.2% + $0.30</string>
+
+    <!--#########################################################################################-->
+    <!-- Lista de opciones Otros Paises-->
+    <string name="transaction_otros_domesticoInternacional">Domestico/Internacional</string>
+
+    <!-- Lista de comisiones Otros Paises-->
+    <string name="comision_otros_domesticoInternacional_1" translatable="false">5.4% + $0.30 ($0.00~$3000.00)</string>
+</resources>
