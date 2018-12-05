@@ -21,9 +21,11 @@
     <string name="tv_tipo_de_comision">Tipo de comisión:</string>
 
     <!-- SelectCoutryActivity / SelectTransactionActivity -->
-    <string name="tv_seleccion_pais">Seleccione el pais de la cuenta que enviara el dinero</string>
+    <string name="tv_seleccion_pais_envia">Seleccione el pais de la cuenta que envia:</string>
+    <string name="tv_seleccion_pais_recibe">Y el pais de la cuenta que recibe:</string>
     <string name="tv_seleccion_transaccion">Seleccione el tipo de transacción que desea realizar</string>
     <string name="cb_recordar">Recordar selección.</string>
     <string name="btn_siguiente">Siguiente</string>
+    <string name="texto_prueba">Texto Prueba</string>
 
 </resources>

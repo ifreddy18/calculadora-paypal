@@ -17,7 +17,6 @@
     <string name="tv_monto_a_recibir">Amount to receive:</string>
     <string name="tv_Option2_monto_a_recibir">Enter the amount you want to receive:</string>
     <string name="btn_acercaDe">About</string>
-    <string name="tv_seleccion_pais">Select the country of the account that will send the money.</string>
     <string name="tv_tipo_de_comision">Fee rate:</string>
     <string name="tv_seleccion_transaccion">Select the type of transaction you want to make</string>
     <string name="cb_recordar">Remember selection.</string>
@@ -34,4 +33,6 @@
     <string name="transaction_usa_hereManual">PayPal Here: Manually entered transactions</string>
     <string name="transaction_usa_hereTarjeta">PayPal Here: Swipe Card</string>
     <string name="transaction_usa_caridades">Charities</string>
+    <string name="tv_seleccion_pais_envia">Select the country of the account that will send the money:</string>
+    <string name="tv_seleccion_pais_recibe">And the country of the account that will receive:</string>
 </resources>

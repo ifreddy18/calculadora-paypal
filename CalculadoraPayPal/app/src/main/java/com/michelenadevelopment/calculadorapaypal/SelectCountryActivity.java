@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.Spinner;
 
 import com.google.android.gms.ads.AdRequest;
@@ -16,7 +15,7 @@ import com.google.android.gms.ads.MobileAds;
 public class SelectCountryActivity extends AppCompatActivity {
 
     private AdView mAdViewSelectCountry;
-    private Spinner spinnerSeleccionPais;
+    private Spinner spinnerSeleccionPaisEnvia, spinnerSeleccionPaisRecibe;
     //private CheckBox cbSeleccionPais;
 
     @Override
@@ -32,7 +31,8 @@ public class SelectCountryActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdViewSelectCountry.loadAd(adRequest);
 
-        spinnerSeleccionPais = findViewById(R.id.spinner_seleccion_pais);
+        spinnerSeleccionPaisEnvia = findViewById(R.id.spinner_seleccion_pais_envia);
+        spinnerSeleccionPaisRecibe = findViewById(R.id.spinner_seleccion_pais_recibe);
         //cbSeleccionPais = findViewById(R.id.cb_seleccion_pais);
         Button buttonSeleccionPais = findViewById(R.id.button_seleccion_pais);
 
@@ -45,7 +45,8 @@ public class SelectCountryActivity extends AppCompatActivity {
         ArrayAdapter <String> arrayPaises = new ArrayAdapter<>
                 (this,R.layout.custom_spinner, country);
 
-        spinnerSeleccionPais.setAdapter(arrayPaises);
+        spinnerSeleccionPaisEnvia.setAdapter(arrayPaises);
+        spinnerSeleccionPaisRecibe.setAdapter(arrayPaises);
 
         // Button Siguiente
         buttonSeleccionPais.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +54,8 @@ public class SelectCountryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(SelectCountryActivity.this, SelectTransactionActivity.class);
                 i.putExtra("option", getIntent().getStringExtra("option"));
-                i.putExtra("seleccionPais", spinnerSeleccionPais.getSelectedItem().toString());
+                i.putExtra("seleccionPaisEnvia", spinnerSeleccionPaisEnvia.getSelectedItem().toString());
+                i.putExtra("seleccionPaisRecibe", spinnerSeleccionPaisRecibe.getSelectedItem().toString());
                 startActivity(i);
             }
         });
