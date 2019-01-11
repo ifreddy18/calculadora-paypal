@@ -16,7 +16,6 @@ public class SelectCountryActivity extends AppCompatActivity {
 
     private AdView mAdViewSelectCountry;
     private Spinner spinnerSeleccionPaisEnvia, spinnerSeleccionPaisRecibe;
-    //private CheckBox cbSeleccionPais;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class SelectCountryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_country);
 
         // Inicializacion de las Ads
-        MobileAds.initialize(this, "ca-app-pub-7656486697746182~8725726230");
+        MobileAds.initialize(this, getText(R.string.admob_app_id).toString());
 
         // Load an Ad
         mAdViewSelectCountry = findViewById(R.id.adViewSelectCountry);
@@ -33,7 +32,6 @@ public class SelectCountryActivity extends AppCompatActivity {
 
         spinnerSeleccionPaisEnvia = findViewById(R.id.spinner_seleccion_pais_envia);
         spinnerSeleccionPaisRecibe = findViewById(R.id.spinner_seleccion_pais_recibe);
-        //cbSeleccionPais = findViewById(R.id.cb_seleccion_pais);
         Button buttonSeleccionPais = findViewById(R.id.button_seleccion_pais);
 
         // Lista de paises
@@ -53,7 +51,6 @@ public class SelectCountryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SelectCountryActivity.this, SelectTransactionActivity.class);
-                i.putExtra("option", getIntent().getStringExtra("option"));
                 i.putExtra("seleccionPaisEnvia", spinnerSeleccionPaisEnvia.getSelectedItem().toString());
                 i.putExtra("seleccionPaisRecibe", spinnerSeleccionPaisRecibe.getSelectedItem().toString());
                 startActivity(i);

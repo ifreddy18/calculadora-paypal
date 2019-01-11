@@ -10,7 +10,7 @@
                         android:radius="25dp"/>
                     <stroke
                         android:width="2dp"
-                        android:color="@color/paypalGray"/>
+                        android:color="@color/white"/>
                 </shape>
             </item>
         </layer-list>

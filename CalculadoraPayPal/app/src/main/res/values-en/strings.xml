@@ -2,22 +2,9 @@
 <resources>
     <string name="app_name">PayPal Calculator</string>
     <string name="country_usa">United States (USD)</string>
-    <string name="btn_borrar">Clear</string>
     <string name="btn_siguiente" translatable="false">Next</string>
     <string name="comision_usa_domesticaBalance_1" translatable="false">Free</string>
-    <string name="tv_main_title_1">Do you know the amount you want to send or the amount you want to receive?</string>
-    <string name="tv_main_title_2">What calculation do you want to make?</string>
-    <string name="tv_main_title_3">Advanced calculations</string>
-    <string name="btn_option1">Calculate amount to receive</string>
-    <string name="btn_option2">Calculate amount to send</string>
-    <string name="btn_calcular">Calculate</string>
-    <string name="tv_Option1_monto_a_enviar">Enter the amount you want to send:</string>
-    <string name="tv_monto_a_enviar">Amount to send:</string>
     <string name="tv_comision">Fee:</string>
-    <string name="tv_monto_a_recibir">Amount to receive:</string>
-    <string name="tv_Option2_monto_a_recibir">Enter the amount you want to receive:</string>
-    <string name="btn_acercaDe">About</string>
-    <string name="tv_tipo_de_comision">Fee rate:</string>
     <string name="tv_seleccion_transaccion">Select the type of transaction you want to make</string>
     <string name="cb_recordar">Remember selection.</string>
     <string name="transaction_otros_domesticoInternacional">Domestic/International</string>
@@ -35,4 +22,15 @@
     <string name="transaction_usa_caridades">Charities</string>
     <string name="tv_seleccion_pais_envia">Select the country of the account that will send the money:</string>
     <string name="tv_seleccion_pais_recibe">And the country of the account that will receive:</string>
+    <string name="comision_aplicada">Applied Fee (auto):</string>
+    <string name="switch_text">Reverse</string>
+    <string name="ingrese_monto_a_recibir">Enter amount to receive:</string>
+    <string name="ingrese_monto_a_enviar">Enter amount to send:</string>
+    <string name="monto_a_enviar">Amount to send:</string>
+    <string name="monto_a_recibir">Amount to receive:</string>
+    <string name="message_option">This option is not available</string>
+    <string name="configuraciones">Configurations</string>
+    <string name="calculo_avanzado">Advanced Calculation</string>
+    <string name="calculo_rapido">Easy Calculation</string>
+    <string name="agregar_comision_personalizada">Add fixed fee</string>
 </resources>

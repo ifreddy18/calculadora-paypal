@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,32 +23,39 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Inicializacion de las Ads
-        MobileAds.initialize(this, "ca-app-pub-7656486697746182~8725726230");
+        MobileAds.initialize(this, getText(R.string.admob_app_id).toString());
 
         // Load an Ad
         mAdViewMain = findViewById(R.id.adViewMain);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdViewMain.loadAd(adRequest);
 
-        Button buttonOption1 = findViewById(R.id.buttonOption1);
-        Button buttonOption2 = findViewById(R.id.buttonOption2);
+        Button buttonCalculoRapido = findViewById(R.id.buttonCalculoRapido);
+        Button buttonCalculoAvanzado = findViewById(R.id.buttonCalculoAvanzado);
+        Button buttonConfiguraciones = findViewById(R.id.buttonConfiguraciones);
 
-        buttonOption1.setOnClickListener(new View.OnClickListener() {
+        buttonCalculoRapido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, SelectCountryActivity.class);
-                i.putExtra("option","Option1");
+                Intent i = new Intent(MainActivity.this, CalculoRapidoActivity.class);
                 startActivity(i);
-
             }
         });
 
-        buttonOption2.setOnClickListener(new View.OnClickListener() {
+        buttonCalculoAvanzado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this, SelectCountryActivity.class);
-                i.putExtra("option","Option2");
                 startActivity(i);
+            }
+        });
+
+        buttonConfiguraciones.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, ConfiguracionActivity.class);
+                startActivity(i);
+
             }
         });
 

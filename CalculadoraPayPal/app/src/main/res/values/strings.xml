@@ -1,31 +1,65 @@
 <resources>
     <string name="app_name">Calculadora PayPal</string>
     <string name="michelena" translatable="false">Michelena Development</string>
-    <string name="tv_main_title_1">¿Sabes el monto que se quiere enviar o el que se quiere recibir?</string>
-    <string name="tv_main_title_2">¿Que cálculo deseas realizar?</string>
-    <string name="tv_main_title_3">Cálculos avanzados</string>
-    <!-- MainActivity -->
-    <string name="btn_option1">Calcular monto a recibir</string>
-    <string name="btn_option2">Calcular monto a enviar</string>
-    <string name="btn_calcular">Calcular</string>
-    <string name="tv_Option1_monto_a_enviar">Ingresa el monto que se quiere enviar:</string>
-    <string name="tv_monto_a_enviar">Monto a enviar:</string>
-    <string name="tv_comision">Comisión:</string>
-    <string name="tv_monto_a_recibir">Monto a recibir:</string>
-    <string name="tv_Option2_monto_a_recibir">Ingrese el monto que se quiere recibir:</string>
-    <string name="hint_cero" translatable="false">0.00</string>
-    <string name="btn_borrar">Borrar</string>
     <string name="title_activity_launcher" translatable="false">LauncherActivity</string>
     <string name="logolauncher" translatable="false">LogoLauncher</string>
-    <string name="btn_acercaDe">Acerca de</string>
-    <string name="tv_tipo_de_comision">Tipo de comisión:</string>
+    <string name="contentdescription" translatable="false">ContentDescripction</string>
+
+    <!-- Admob -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-7656486697746182~8725726230</string>
+    <string name="admob_bannerCalculoRapido" translatable="false">ca-app-pub-7656486697746182/3194800591</string>
+    <string name="admob_bannerCalculoAvanzado" translatable="false">ca-app-pub-7656486697746182/9185493872</string>
+    <string name="admob_bannerConfiguracion" translatable="false">ca-app-pub-7656486697746182/2870900680</string>
+    <string name="admob_bannerMain" translatable="false">ca-app-pub-7656486697746182/2431780620</string>
+    <string name="admob_bannerSelectCountryActivity" translatable="false">ca-app-pub-7656486697746182/3928582122</string>
+    <string name="admob_bannerSelectTransactionActivity" translatable="false">ca-app-pub-7656486697746182/1817424100</string>
+    <string name="admob_intersticialCalculoRapido" translatable="false">ca-app-pub-7656486697746182/7605240663</string>
+    <string name="admob_intersticialCalculoAvanzado" translatable="false">ca-app-pub-7656486697746182/1339161317</string>
+    <string name="admob_adPrueba_instertitial" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_adPrueba_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+
+    <!-- MainActivity -->
+    <string name="calculo_rapido">Cálculo Rapido</string>
+    <string name="calculo_avanzado">Cálculo Avanzado</string>
+    <string name="configuraciones">Configuraciones</string>
+    <string name="message_option">Esta opcion no esta disponible</string>
+    <string name="agregar_comision_personalizada">Agregar Comisión Personalizada</string>
 
     <!-- SelectCoutryActivity / SelectTransactionActivity -->
     <string name="tv_seleccion_pais_envia">Seleccione el pais de la cuenta que envia:</string>
     <string name="tv_seleccion_pais_recibe">Y el pais de la cuenta que recibe:</string>
     <string name="tv_seleccion_transaccion">Seleccione el tipo de transacción que desea realizar</string>
     <string name="cb_recordar">Recordar selección.</string>
+
+    <!-- Calculo Rapido / Calculo Avanzado -->
+    <string name="hint_cero" translatable="false">0.00</string>
+    <string name="tv_comision">Comisión:</string>
+    <string name="monto_a_recibir">Monto a recibir:</string>
+    <string name="monto_a_enviar">Monto a enviar:</string>
+    <string name="ingrese_monto_a_enviar">Ingrese monto a enviar:</string>
+    <string name="ingrese_monto_a_recibir">Ingrese monto a recibir:</string>
+    <string name="switch_text">Invertir calculo</string>
+    <string name="comision_aplicada">Comisión Aplicada (auto):</string>
+
+
+    <!-- Teclado -->
     <string name="btn_siguiente">Siguiente</string>
-    <string name="texto_prueba">Texto Prueba</string>
+    <string name="btn_number_0" translatable="false">0</string>
+    <string name="btn_number_1" translatable="false">1</string>
+    <string name="btn_number_2" translatable="false">2</string>
+    <string name="btn_number_3" translatable="false">3</string>
+    <string name="btn_number_4" translatable="false">4</string>
+    <string name="btn_number_5" translatable="false">5</string>
+    <string name="btn_number_6" translatable="false">6</string>
+    <string name="btn_number_7" translatable="false">7</string>
+    <string name="btn_number_8" translatable="false">8</string>
+    <string name="btn_number_9" translatable="false">9</string>
+    <string name="btn_number_dot" translatable="false">.</string>
+    <string name="btn_number_equals" translatable="false">=</string>
+    <string name="btn_number_clear" translatable="false">C</string>
+
+
+    <!-- No ordenados -->
+
 
 </resources>

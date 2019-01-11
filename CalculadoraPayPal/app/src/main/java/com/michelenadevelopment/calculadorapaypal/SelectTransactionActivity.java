@@ -33,7 +33,7 @@ public class SelectTransactionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_transaction);
 
         // Inicializacion de las Ads
-        MobileAds.initialize(this, "ca-app-pub-7656486697746182~8725726230");
+        MobileAds.initialize(this, getText(R.string.admob_app_id).toString());
 
         // Load an Ad
         mAdViewSelectTransaction = findViewById(R.id.adViewSelectTransaction);
@@ -108,13 +108,7 @@ public class SelectTransactionActivity extends AppCompatActivity {
         buttonSeleccionTransaccion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i;
-                String option = getIntent().getStringExtra("option");
-                if (option.equals("Option1")){
-                    i = new Intent(SelectTransactionActivity.this, Option1Activity.class);
-                } else {
-                    i = new Intent(SelectTransactionActivity.this, Option2Activity.class);
-                }
+                Intent i = new Intent(SelectTransactionActivity.this, CalculoAvanzadoActivity.class);
 
                 i.putExtra("seleccionPaisEnvia", seleccionPaisEnvia);
                 i.putExtra("seleccionPaisRecibe", seleccionPaisRecibe);

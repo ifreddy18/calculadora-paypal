@@ -8,6 +8,6 @@
     android:maxLines="100"
     android:textColor="@color/black"
     android:textAlignment="center"
-    android:background="@drawable/custom_spinner_drawable_2"
+    android:background="@drawable/custom_spinner_drawable_1"
     android:scrollHorizontally="false"
     />
