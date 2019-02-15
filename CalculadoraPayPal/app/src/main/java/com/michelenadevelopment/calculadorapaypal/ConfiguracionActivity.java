@@ -1,5 +1,7 @@
 package com.michelenadevelopment.calculadorapaypal;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,11 +30,31 @@ public class ConfiguracionActivity extends AppCompatActivity {
         mAdViewConfiguracion.loadAd(adRequest);
 
         Button buttonAgregarComision = findViewById(R.id.buttonAgregarComision);
+        Button buttonPrivacyPolicy = findViewById(R.id.buttonPrivacyPolicy);
 
         buttonAgregarComision.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(ConfiguracionActivity.this, R.string.message_option, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        buttonPrivacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Opcion para WebView dentro de la App
+                Intent i = new Intent(ConfiguracionActivity.this, WebViewActivity.class);
+                startActivity(i);
+
+                // Opcion para navegador externo
+                /*
+                String url = getResources().getString(R.string.privacy_policy_url);
+                Intent intentWeb = new Intent();
+                intentWeb.setAction(Intent.ACTION_VIEW);
+                intentWeb.setData(Uri.parse(url));
+                startActivity(intentWeb);
+                */
             }
         });
     }

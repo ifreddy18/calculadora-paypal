@@ -22,8 +22,6 @@
     <string name="calculo_rapido">Cálculo Rapido</string>
     <string name="calculo_avanzado">Cálculo Avanzado</string>
     <string name="configuraciones">Configuraciones</string>
-    <string name="message_option">Esta opcion no esta disponible</string>
-    <string name="agregar_comision_personalizada">Agregar Comisión Personalizada</string>
 
     <!-- SelectCoutryActivity / SelectTransactionActivity -->
     <string name="tv_seleccion_pais_envia">Seleccione el pais de la cuenta que envia:</string>
@@ -41,6 +39,11 @@
     <string name="switch_text">Invertir calculo</string>
     <string name="comision_aplicada">Comisión Aplicada (auto):</string>
 
+    <!-- Configuraciones -->
+    <string name="message_option">Esta opcion no esta disponible</string>
+    <string name="agregar_comision_personalizada">Agregar Comisión Personalizada</string>
+    <string name="privacy_policy">Política de privacidad</string>
+    <string name="privacy_policy_url" translatable="false">https://michelenadevelopment.wordpress.com/privacy-policy/</string>
 
     <!-- Teclado -->
     <string name="btn_siguiente">Siguiente</string>

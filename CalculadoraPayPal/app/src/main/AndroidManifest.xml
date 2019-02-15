@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.michelenadevelopment.calculadorapaypal">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,12 +35,10 @@
         </activity>
         <activity
             android:name=".SelectCountryActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SelectTransactionActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".CalculoRapidoActivity"
             android:screenOrientation="portrait"
@@ -49,8 +49,8 @@
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".ConfiguracionActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:screenOrientation="portrait" />
+        <activity android:name=".WebViewActivity"></activity>
     </application>
 
 </manifest>
